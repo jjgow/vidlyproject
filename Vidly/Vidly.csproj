@@ -255,6 +255,10 @@
     <Compile Include="Migrations\201607070909329_PopulateAddedMovieProperties.Designer.cs">
       <DependentUpon>201607070909329_PopulateAddedMovieProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607121113435_updatemovieclass.cs" />
+    <Compile Include="Migrations\201607121113435_updatemovieclass.Designer.cs">
+      <DependentUpon>201607121113435_updatemovieclass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -265,7 +269,8 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\NewCustomerViewModel.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -333,7 +338,8 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
-    <Content Include="Views\Customers\New.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -385,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607070909329_PopulateAddedMovieProperties.resx">
       <DependentUpon>201607070909329_PopulateAddedMovieProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607121113435_updatemovieclass.resx">
+      <DependentUpon>201607121113435_updatemovieclass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
