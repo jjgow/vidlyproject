@@ -259,6 +259,10 @@
     <Compile Include="Migrations\201607121113435_updatemovieclass.Designer.cs">
       <DependentUpon>201607121113435_updatemovieclass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607162348057_Update.cs" />
+    <Compile Include="Migrations\201607162348057_Update.Designer.cs">
+      <DependentUpon>201607162348057_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -266,6 +270,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -394,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607121113435_updatemovieclass.resx">
       <DependentUpon>201607121113435_updatemovieclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607162348057_Update.resx">
+      <DependentUpon>201607162348057_Update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
