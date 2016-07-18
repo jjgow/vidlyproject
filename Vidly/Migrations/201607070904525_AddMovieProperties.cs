@@ -7,16 +7,16 @@ namespace Vidly.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Movies", "ReleaseDate", c => c.DateTime());
-            AddColumn("dbo.Movies", "DateAdded", c => c.DateTime());
-            AddColumn("dbo.Movies", "NumberInStock", c => c.Int(nullable: false));
+            AddColumn("dbo.s", "ReleaseDate", c => c.DateTime());
+            AddColumn("dbo.s", "DateAdded", c => c.DateTime());
+            AddColumn("dbo.s", "NumberInStock", c => c.Int(nullable: false));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Movies", "NumberInStock");
-            DropColumn("dbo.Movies", "DateAdded");
-            DropColumn("dbo.Movies", "ReleaseDate");
+            DropColumn("dbo.s", "NumberInStock");
+            DropColumn("dbo.s", "DateAdded");
+            DropColumn("dbo.s", "ReleaseDate");
         }
     }
 }

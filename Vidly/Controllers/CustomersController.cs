@@ -36,6 +36,7 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer) // this parameter could be changed to a dto object, allowing us to control the data we want to update. Can also use AutoMapper
         {
             if (!ModelState.IsValid)
