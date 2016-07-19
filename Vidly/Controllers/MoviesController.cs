@@ -38,7 +38,8 @@ namespace Vidly.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Save(Movie movie) // this parameter could be changed to a dto object, allowing us to control the data we want to update. Can also use AutoMapper
+        public ActionResult Save(Movie movie)
+            // this parameter could be changed to a dto object, allowing us to control the data we want to update. Can also use AutoMapper
         {
             if (!ModelState.IsValid)
             {
@@ -51,13 +52,16 @@ namespace Vidly.Controllers
             }
 
             if (movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
+            }
             else
             {
                 var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
                 movieInDb.Name = movie.Name;
                 movieInDb.Genre = movie.Genre;
-                movieInDb.NumberInStock = movieInDb.NumberInStock;
+                movieInDb.NumberInStock = movie.NumberInStock;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
             }
              _context.SaveChanges();
