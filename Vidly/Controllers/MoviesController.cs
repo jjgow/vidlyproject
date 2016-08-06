@@ -24,6 +24,7 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ViewResult New()
         {
             var genres = _context.Genres.ToList();
@@ -38,6 +39,7 @@ namespace Vidly.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movie movie)
             // this parameter could be changed to a dto object, allowing us to control the data we want to update. Can also use AutoMapper
         {
@@ -71,9 +73,10 @@ namespace Vidly.Controllers
 
         public ViewResult Index()
         {
-            var movie = _context.Movies.Include(m => m.Genre).ToList();
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
 
-            return View(movie);
+            return View("ReadOnlyList");
         }
 
         public ActionResult Details(int id)
@@ -86,6 +89,7 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
