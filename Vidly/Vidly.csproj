@@ -299,6 +299,10 @@
     <Compile Include="Migrations\201608062356509_AddDrivingLicenseToApplicationUser.Designer.cs">
       <DependentUpon>201608062356509_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608090443128_AddContactNumberToApplicationUserAndCustomerAuthorization.cs" />
+    <Compile Include="Migrations\201608090443128_AddContactNumberToApplicationUserAndCustomerAuthorization.Designer.cs">
+      <DependentUpon>201608090443128_AddContactNumberToApplicationUserAndCustomerAuthorization.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -629,6 +633,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608062356509_AddDrivingLicenseToApplicationUser.resx">
       <DependentUpon>201608062356509_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608090443128_AddContactNumberToApplicationUserAndCustomerAuthorization.resx">
+      <DependentUpon>201608090443128_AddContactNumberToApplicationUserAndCustomerAuthorization.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
